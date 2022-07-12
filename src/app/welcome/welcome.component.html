@@ -1,0 +1,8 @@
+<p>{{welcome_msg}} {{name}}</p>
+
+<button (click)=toDoList()>Display to do list</button>
+
+<button (click)=getwelcomemsg_withname()>Get Welcome Message</button>
+<p *ngIf="data">
+    {{data}}
+</p>

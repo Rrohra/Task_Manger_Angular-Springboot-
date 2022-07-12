@@ -1,0 +1,21 @@
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">     <!--navbar-dark = light bg pe gayab kardeta hai-->
+        <div class="navbar-brand">
+            Rohit' TODO
+        </div>
+
+        <ul class="navbar-nav">
+            <li ><a *ngIf="hardcodedauth_var.isUserLoggedIn()" class="nav-link" routerLink="/welcome/rohit">Home</a></li>    <!-- using nav-link instead nav-item gives good padding in between-->
+            <li ><a *ngIf="hardcodedauth_var.isUserLoggedIn()" class="nav-link"routerLink="/todo">Todo</a></li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">    <!--if navbar-collapse nahi daala toh justify-content-end wont work -->
+            <li ><a *ngIf="!hardcodedauth_var.isUserLoggedIn()" class="nav-link" routerLink="/login">Login</a></li>
+            <li ><a *ngIf="hardcodedauth_var.isUserLoggedIn()" class="nav-link" routerLink="/logout">Logout</a></li>
+        </ul>
+    </nav>
+</header> 
+
+<button mat-raised-button>Rohit</button>
+

@@ -1,0 +1,27 @@
+<h1> My Todos</h1>
+<div class="container">
+    <button type="submit" (click)="createTodo()">Create new Todo</button>
+    <table class="todos table">
+        <!--<caption>My todos</caption>-->
+        <thead>
+            <th>id</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <!-- for (Todo var : todos)-->
+            <tr *ngFor="let todo_var of todos"> <!--todos = array ka naam hai-->
+                <td>{{todo_var.id}}</td>
+                <td>{{todo_var.description}}</td>
+                <td>{{todo_var.done}}</td>
+                <td>{{todo_var.tragetDate}}</td>
+                <td><button (click)=updateTodoScreen(todo_var.id)>Update</button></td>
+                <td><button (click)=deleteTodo(todo_var.id)>Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

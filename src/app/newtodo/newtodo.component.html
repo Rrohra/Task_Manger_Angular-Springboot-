@@ -1,0 +1,19 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <label for="userName" >UserName</label>
+    <input type="text" id="userName" formControlName="userName">
+    
+    <label for="description">Description</label>
+    <input type="textarea" id="description" formControlName="description">
+
+    <label for="isDone">Task Status</label>
+    <input type="radio" formControlName="isDone" id="done" name="isDone" value=true>
+    <label for="html">Done</label><br>
+    <input type="radio" formControlName="isDone" id="notdone" name="isDone" value=false>
+    <label for="css">Pending</label><br>
+
+
+    <label for="tragetDate">Target Date</label>
+    <input type="date" id="tragetDate" formControlName="tragetDate">
+
+    <button type="submit">Create a Todo</button>
+</form>
